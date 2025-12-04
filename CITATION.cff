@@ -1,18 +1,18 @@
-cff-version: 1.2.0
-message: "If you use CompText in your research, please cite it as below."
+citation-format: ciff-version
+version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "CompText Ecosystem"
 authors:
-  - family-names: "Your Name"
-    given-names: ""
-    orcid: ""
-title: "CompText: Token-Efficient DSL for LLM Interactions"
-version: 1.0.0
-date-released: 2025-12-04
+  - family-names: "CompText"
+    given-names: "Team"
+type: software
 url: "https://github.com/ProfRandom92/comptext"
 repository-code: "https://github.com/ProfRandom92/comptext"
 keywords:
-  - LLM
-  - DSL
+  - dsl
+  - llm
   - token-optimization
-  - AI
-  - natural-language-processing
-license: MIT
+  - mcp-server
+contact:
+  - name: "CompText Maintainers"
+    email: "comptext@example.com"
