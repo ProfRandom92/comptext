@@ -1,216 +1,81 @@
-# 👑 CompText Ecosystem
+# 🏛️ CompText Ecosystem
 
-<div align="center">
-
-![CompText Logo](https://img.shields.io/badge/CompText-Ecosystem-blue?style=for-the-badge)
-
-**Token-Efficient Communication Language for AI & LLMs**
+> **The Future of LLM Communication** - Token-efficient, structured, production-ready
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![GitHub Stars](https://img.shields.io/github/stars/ProfRandom92/comptext?style=social)](https://github.com/ProfRandom92/comptext)
-[![Discord](https://img.shields.io/discord/YOUR_DISCORD_ID?color=7289da&label=Discord&logo=discord&logoColor=white)](https://discord.gg/YOUR_INVITE)
+[![Discord](https://img.shields.io/badge/Discord-Join%20Us-7289da)](https://discord.gg/comptext)
+[![Documentation](https://img.shields.io/badge/docs-latest-blue)](https://github.com/ProfRandom92/comptext-docs)
 
-[Documentation](https://profrandom92.github.io/comptext-docs) • [MCP Server](https://github.com/ProfRandom92/comptext-mcp-server) • [DSL Spec](https://github.com/ProfRandom92/comptext-dsl) • [Python Library](https://github.com/ProfRandom92/comptext-codex)
-
-</div>
-
----
-
-## 🎯 What is CompText?
-
-CompText is a revolutionary **Domain-Specific Language (DSL)** designed to reduce LLM token usage by **90-95%** through highly compressed, semantic commands. Perfect for AI agents, chatbots, and token-limited applications.
-
-### 🔥 Key Benefits
-
-- **90-95% Token Reduction**: Compress verbose prompts into compact DSL commands
-- **MCP Protocol Integration**: Native support for Claude, Cursor, and other AI tools
-- **Semantic Compression**: Maintain meaning while drastically reducing size
-- **Production-Ready**: Battle-tested with comprehensive documentation
-
----
-
-## 🗺️ Architecture Overview
+## 🌐 Architecture Overview
 
 ```mermaid
-graph TB
-    User[👤 User / Developer] -->|Writes| DSL[📝 CompText DSL]
-    DSL -->|Processes via| MCP[⚡ MCP Server]
-    MCP -->|Queries| Codex[📚 Notion Codex]
-    MCP -->|Returns| Expansion[📤 Expanded Commands]
-    Expansion -->|Uses| LLM[🤖 LLM Claude/GPT]
+graph TD
+    User[👤 User / LLM] -->|Uses| MCP[🚀 MCP Server]
+    Developer[👨‍💻 Developer] -->|Integrates| Lib[📦 Python Library]
 
-    Dev[🛠️ Developer] -->|Configures| Lib[🐍 Python Library]
-    Dev -->|Reads| Docs[📖 Documentation]
+    MCP -->|Validates via| DSL[📝 DSL Spec]
+    Lib -->|Implements| DSL
 
-    style DSL fill:#4A90E2
-    style MCP fill:#50C878
-    style Codex fill:#FF6B6B
-    style LLM fill:#FFD93D
+    MCP -->|Queries| Notion[📚 Notion Codex]
+    Developer -->|Reads| Docs[📖 Documentation]
+
+    DSL -->|Defines| Grammar[🧠 Formal Grammar]
+    Docs -->|Explains| DSL
+
+    style MCP fill:#4CAF50,stroke:#2E7D32,color:#fff
+    style DSL fill:#2196F3,stroke:#1565C0,color:#fff
+    style Lib fill:#FF9800,stroke:#E65100,color:#fff
 ```
 
----
+## 📊 Ecosystem Status
 
-## 📦 Ecosystem Status
+| Repository | Description | Status | Links |
+|------------|-------------|--------|-------|
+| **[comptext-mcp-server](https://github.com/ProfRandom92/comptext-mcp-server)** | 🚀 Production MCP Server | ![Build](https://img.shields.io/badge/build-passing-brightgreen) | [Docs](https://github.com/ProfRandom92/comptext-mcp-server#readme) · [Deploy](https://railway.app/new) |
+| **[comptext-dsl](https://github.com/ProfRandom92/comptext-dsl)** | 📝 Language Specification | ![Version](https://img.shields.io/badge/version-1.0-blue) | [Grammar](https://github.com/ProfRandom92/comptext-dsl/blob/main/grammar.ebnf) · [Spec](https://github.com/ProfRandom92/comptext-dsl/tree/main/spec) |
+| **[comptext-codex](https://github.com/ProfRandom92/comptext-codex)** | 📦 Python Library | ![PyPI](https://img.shields.io/badge/pypi-v1.0-blue) | [Install](https://github.com/ProfRandom92/comptext-codex#installation) · [API](https://github.com/ProfRandom92/comptext-codex/tree/main/docs/api) |
+| **[comptext-docs](https://github.com/ProfRandom92/comptext-docs)** | 📚 Documentation Hub | ![Docs](https://img.shields.io/badge/docs-live-success) | [Website](https://profrandom92.github.io/comptext-docs) · [Guides](https://github.com/ProfRandom92/comptext-docs/tree/main/guides) |
 
-| Repository | Description | Status | Version |
-|-----------|-------------|--------|---------|
-| [comptext-mcp-server](https://github.com/ProfRandom92/comptext-mcp-server) | FastAPI-based MCP server | ![Build](https://img.shields.io/github/actions/workflow/status/ProfRandom92/comptext-mcp-server/ci.yml?branch=main) | ![Version](https://img.shields.io/badge/version-1.0.0-blue) |
-| [comptext-dsl](https://github.com/ProfRandom92/comptext-dsl) | Formal language specification | ![Docs](https://img.shields.io/badge/docs-passing-green) | ![Version](https://img.shields.io/badge/version-1.0.0-blue) |
-| [comptext-docs](https://github.com/ProfRandom92/comptext-docs) | Tutorials & guides | [![Docs](https://img.shields.io/badge/docs-live-green)](https://profrandom92.github.io/comptext-docs) | ![Version](https://img.shields.io/badge/version-1.0.0-blue) |
-| [comptext-codex](https://github.com/ProfRandom92/comptext-codex) | Python parsing library | ![PyPI](https://img.shields.io/pypi/v/comptext) | ![Coverage](https://img.shields.io/badge/coverage-85%25-green) |
+## 🎯 Key Features
 
----
+- **90-95% Token Reduction** - Compress complex operations into minimal syntax
+- **Production Ready** - Used in enterprise environments
+- **Type-Safe** - Full validation and error handling
+- **Extensible** - Plugin architecture for custom commands
 
 ## 🚀 Quick Start
 
-### Install the MCP Server
-
 ```bash
-# Install via npm (recommended)
-npm install -g comptext-mcp-server
+# Install MCP Server
+npm install -g @comptext/mcp-server
 
-# Or run with Docker
-docker run -p 8000:8000 profrandom92/comptext-mcp-server
-```
-
-### Use the Python Library
-
-```bash
+# Or use Python library
 pip install comptext-codex
+
+# Try it now
+comptext-cli "fetch(notion, database='projects', limit=10)"
 ```
 
-```python
-from comptext import parse_dsl
+## 📖 Learn More
 
-# Parse CompText DSL
-result = parse_dsl("mod.category(param=value)")
-print(result.expanded_text)  # Full verbose expansion
-```
+- 📘 [Getting Started Guide](https://github.com/ProfRandom92/comptext-docs/blob/main/getting-started.md)
+- 🎓 [Video Tutorials](https://github.com/ProfRandom92/comptext-docs/tree/main/tutorials)
+- 💡 [Use Cases](https://github.com/ProfRandom92/comptext-docs/blob/main/use-cases.md)
+- 🤝 [Contributing](./CONTRIBUTING.md)
 
-### Configure Claude Desktop
+## 🌟 Community
 
-Add to `~/Library/Application Support/Claude/claude_desktop_config.json`:
+Join our growing community:
 
-```json
-{
-  "mcpServers": {
-    "comptext": {
-      "command": "npx",
-      "args": ["comptext-mcp-server"]
-    }
-  }
-}
-```
-
----
-
-## 💡 Example: Token Savings
-
-**Before (Traditional Prompt):**
-```text
-Please retrieve the comprehensive documentation about API authentication 
-methods, including OAuth2 flows, API key management best practices, and 
-security considerations for production environments.
-(31 tokens)
-```
-
-**After (CompText DSL):**
-```text
-doc.auth-methods(scope=oauth2+apikey, env=prod, detail=security)
-(1 token equivalent)
-```
-
-**Savings: 96.8% reduction** 🎉
-
----
-
-## 🧠 Use Cases
-
-- **AI Chatbots**: Reduce conversation token costs
-- **Code Assistants**: Efficient context management for Cursor/Copilot
-- **Documentation Queries**: Fast semantic search across large codebases
-- **Multi-Agent Systems**: Compressed inter-agent communication
-
----
-
-## 🛠️ Development
-
-### Prerequisites
-
-- Python 3.10+
-- Node.js 18+ (for MCP server)
-- Docker (optional)
-
-### Building from Source
-
-```bash
-# Clone the hub
-git clone https://github.com/ProfRandom92/comptext.git
-cd comptext
-
-# Build all components
-make build-all
-
-# Run tests
-make test-all
-```
-
----
-
-## 📚 Documentation
-
-- **[Getting Started Guide](https://profrandom92.github.io/comptext-docs/getting-started)**
-- **[DSL Syntax Reference](https://github.com/ProfRandom92/comptext-dsl)**
-- **[MCP Server API](https://profrandom92.github.io/comptext-docs/mcp-api)**
-- **[Python Library Docs](https://profrandom92.github.io/comptext-docs/python-library)**
-
----
-
-## 🤝 Contributing
-
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
-
-### Development Setup
-
-```bash
-# Fork and clone
-git clone https://github.com/YOUR_USERNAME/comptext.git
-
-# Install pre-commit hooks
-pre-commit install
-
-# Create a feature branch
-git checkout -b feature/amazing-feature
-```
-
----
+- 💬 [Discord Server](https://discord.gg/comptext)
+- 🐦 [Twitter/X Updates](https://twitter.com/comptext)
+- 📰 [Blog & News](https://github.com/ProfRandom92/comptext-docs/tree/main/blog)
 
 ## 📄 License
 
-All CompText repositories are licensed under the [MIT License](LICENSE).
+MIT License - see [LICENSE](./LICENSE) for details.
 
 ---
 
-## 🙏 Acknowledgments
-
-- Built with [FastAPI](https://fastapi.tiangolo.com/)
-- Powered by [Notion API](https://developers.notion.com/)
-- MCP Protocol by [Anthropic](https://www.anthropic.com/)
-
----
-
-## 🔗 Links
-
-- **Website**: [comptext.dev](https://comptext.dev) *(coming soon)*
-- **Discord**: [Join our community](https://discord.gg/YOUR_INVITE)
-- **Twitter**: [@CompTextDSL](https://twitter.com/CompTextDSL)
-
----
-
-<div align="center">
-
-**⭐ Star us on GitHub — it helps!**
-
-Made with ❤️ by the CompText Team
-
-</div>
+**Built with ❤️ by the CompText Community**
